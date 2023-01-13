@@ -10,7 +10,12 @@ class HangMan{
     private:
         std::string guessed;
         std::vector<std::string> board;
+        //store the actual word
         std::string word;
+        //store the output for most recent guess
+        std::string outWord;
+        //storing location of each char in word
+        int remain;
         std::unordered_map<int, std::string> words;
         int lives;
         int difficulty;
@@ -18,7 +23,7 @@ class HangMan{
         HangMan();
         void askDiff();
         void play();
-        char askNewGame();
+        std::string askNewGame();
         ~HangMan();
 };
 
